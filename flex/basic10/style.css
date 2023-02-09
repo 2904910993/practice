@@ -1,0 +1,16 @@
+@import url(basic.css);
+
+.container {
+    display: flex;
+}
+
+.item:nth-child(1){
+    width: 200px;
+    flex-shrink: 0;
+    /* 0:false / 0을 제외한 숫자, 대표적으로 1 사용: true */
+    /* flex-grow: 1;
+    200px 이하로 줄어들 지는 않지만 늘어나긴 함 */
+}
+.item:nth-child(2){
+    flex-grow: 1;
+}

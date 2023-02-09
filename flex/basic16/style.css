@@ -1,0 +1,12 @@
+@import url(basic.css);
+
+.container {
+    display: flex;
+    height: 50vh;
+}
+
+.item:nth-child(2) {
+    align-self: center;
+    align-self: flex-start;
+    align-self: flex-end;
+}

@@ -1,0 +1,19 @@
+@import url(basic.css);
+
+.container {
+    display: flex;
+}
+
+.item:nth-child(1) {
+    order: 3;
+}
+
+.item:nth-child(2) {
+    order: 1;
+}
+
+.item:nth-child(3) {
+    order: 2;
+}
+
+/* 시각적 순서일 뿐 구조가 바뀌지는 않는다. */

@@ -1,0 +1,24 @@
+@import url(basic.css);
+
+.container {
+    display: flex;
+    /* height: 100vh; 최소값이 100vh */
+    /* min-height: 800px; 800px보다 커질 수는 있지만 줄어들 지는 않음 */
+    /* max-height: 500px; 500px보다 작아질 수는 있지만 더 커지진 않음 */
+    /* flex-direction: column; 메인축 배치방향 변경 */
+    overflow: hidden;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.item {
+    /* height: 500px;
+    flex-shrink: 0; */
+    /* width: 45%; 45+45=90%, 두개 정렬 이후에 넘어가서 또 정렬 됨 */
+    width: 30%;
+    flex: 1 auto;
+    /* => flex: 1 1 auto; */
+    /* flex-grow: 1; 넓이가 있다면 넓이보다 늘어날 수 있음; */
+    /* flex-shrink: 1; 넓이가 있다면 줄어들 수 있음 */
+    /* flex-basis: auto; 넓이 값이 있다면 인식하겠다. */
+}

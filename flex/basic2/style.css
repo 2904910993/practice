@@ -1,0 +1,12 @@
+@import url(basic.css);
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    /* 메인축뱡향으로 이동, flex-start가 기본값 */
+    /* justify-content: flex-end; 순서는 바뀌지 않고 끝으로 이동 */
+    /* justify-content: center; 중앙으로 이동. 가장 많이 쓰임 */
+    /* justify-content: space-between; 여백을 같게 만들며 나눔 */
+    /* justify-content: space-around; 아이템들의 “둘레(around)”에 균일한 간격을 만들어 줌 */
+    /* justify-content: space-evenly; 아이템들의 사이와 양 끝에 균일한 간격을 만들어 줍니다. 주의! IE와 엣지(Edge)에서는 지원되지 않음 */
+}

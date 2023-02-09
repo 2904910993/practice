@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+/* 페이지네이션 점 빼기 */
+
+.wrap {}
+
+.wrap .container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.wrap .container .slick .slick-slide {
+    height: 200px;
+}
+
+.wrap .container .slick .slick-slide img {
+    width: 100%;
+}
+
+/* slick button */
+
+.wrap .container .slick .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    /* 꼭 0을 안 적어도 되지만, 0으로 실행하지 않을 경우 위치가 달라짐 */
+    visibility: hidden;
+    /* 가시성: 안보이게 함 */
+}
+
+.wrap .container .slick .slick-prev {
+    z-index: 10;
+    left: 10%;
+}
+
+.wrap .container .slick .slick-prev::after {
+    content: "\f060";
+    /* f에서 변경 */
+    visibility: visible;
+    font-size: 48px;
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    /* before의 부모인 i태그에서 정보 가져오기 */
+    color: #fff;
+    /* i태그는 인라인 요소이므로 이미지나 아이콘이 아니라 글자처럼 취급 */
+}
+
+.wrap .container .slick .slick-next {
+    right: 10%;
+}
+
+.wrap .container .slick .slick-next::after {
+    content: "\f061";
+    visibility: visible;
+    font-size: 48px;
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    color: #fff;
+}
+
+.wrap .container .slick .slick-dots {
+    text-align: center;
+}
+
+.wrap .container .slick .slick-dots li {
+    display: inline;
+    margin: 0 5px;
+    /* inline요소는 padding과 margin의 좌우는 적용되나 상하는 적용 안 됨 */
+}
+
+.wrap .container .slick .slick-dots li button {
+    font-size: 0;
+    border: none;
+    width: 13px;
+    height: 13px;
+    background-color: #888;
+    border-radius: 50%;
+    transition: 0.3s;
+    /* active에 시간을 주게 되면 active가 없는 버튼에서 부자연스러운 효과 발생함 */
+}
+
+/* 활성화된 페이지의 버튼 */
+.wrap .container .slick .slick-dots li.slick-active button {
+    background-color: #000;
+    width: 20px;
+    border-radius: 10px;
+}
+
+/* 인라인 요소 중에서 공간을 인식하는 요소 img, button */

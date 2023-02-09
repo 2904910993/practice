@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+#전체 {
+    background-color: coral;
+    padding: 20px;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#전체 .첫째자식 {
+    background-color: chartreuse;
+    position: relative;
+    padding: 20px;
+}
+
+#전체 .첫째자식 .첫째손자 {
+    background-color: darkmagenta;
+    height: 200px;
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#전체 .첫째자식 .wrap {
+    position: relative;
+}
+
+#전체 .첫째자식 .첫손2 {
+    background-color: green;
+    position: absolute;
+    opacity: 0;
+    /* 투명도. 0에 가까울수록 투명함 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: 0.3s;
+    background-image: url(../img/img2.jpg);
+}
+
+#전체 .첫째자식:hover .첫손2 {
+    opacity: 1;
+}
+
+#전체 .둘째자식 {
+    margin-top: 30px;
+    height: 200px;
+    padding: 20px;
+    background-color: lawngreen;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#전체 .둘째자식 .둘째손자 {
+    background-color: indigo;
+    width: 200px;
+    /* 기본값, block요소이기 때문 */
+    height: 100px;
+    /* 자식은 부모의 padding에 침범하지 못한다 */
+    position: absolute;
+    /* width와 height가 없으면 둘째자식이 가진padding의 끝에 위치하게 됨 */
+    left: 0px;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    /* 부모로부터의 거리 */
+    /* left: 0; top: 0; right: 0; bottom: 0;
+    넓이, 높이 100% 주는 것과 같음 */
+}
+
+#전체 .둘째자식 {
+    /* 같은 명령문이면 최신의 것이 효력이 강하고, 중복되지 않은 명령문이면 병합된다 */
+    margin-bottom: 50px;
+}
+
+#전체 .셋째자식 {
+    margin-top: 30px;
+    /* margin병합현상(margin-bottom과 margin-top의 숫자가 합쳐지는 것이 아니라 큰 값으로 병합된다;) */
+    background-color: #46C2CB;
+
+}
+
+#전체 .셋째자식>div {
+    background-color: #FFBF00;
+    width: 40%;
+    margin: 0 5%;
+    /* 상하0 좌우 5% */
+    /* 좌우의 margin은 병합되지않고 추가된다 */
+    float: left;
+}
+
+#전체 .셋째자식>div ol {
+    list-style-type: upper-roman;
+}
+
+#전체 .셋째자식>div ul {
+    list-style-type: circle;
+}
+
+#전체 .셋째자식>div li {
+    border: 1px solid gray;
+}
+
+/* ol이나 ul의 자식요소는 li만 가능하다 */
+
+#전체 .넷째자식 {
+    background-color: #FFBF00;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+#전체 .넷째자식 .넷째손자 {
+    background-color: aquamarine;
+}
+
+#전체 .넷째자식 .넷째손자 dt {
+    background-color: cadetblue;
+}
+
+#전체 .넷째자식 .넷째손자 dd {
+    background-color: darkkhaki;
+}

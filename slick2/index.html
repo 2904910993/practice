@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slick2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="slick">
+                <div>
+                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000086/86720/86720210682_727.jpg"
+                        alt="이미지1">
+                </div>
+                <div>
+                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000086/86720/86720210680_727.jpg"
+                        alt="이미지2">
+                </div>
+                <div>
+                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000086/86720/86720210683_727.jpg"
+                        alt="이미지3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slick').slick({
+                //setting - name: setting - value
+                autoplay: true, //클릭하지 않아도 자동 실행
+                dots: true, //누르면 그 페이지로 이동(pagenation 페이지네이션)
+            });
+        });
+    </script>
+</body>
+
+</html>

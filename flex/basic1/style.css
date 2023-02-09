@@ -1,0 +1,29 @@
+@import url(basic.css);
+
+.container {
+    display: flex;
+    /* display: inline-flex; */
+    flex-direction: row;
+    /* 배치방향 설정: row가 기본값 */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    flex-wrap: nowrap;
+    /* 줄넘김 처리 설정: nowrap이 기본값 */
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse; */
+
+    flex-flow: row nowrap;
+    /* flex-flow: flex-direction flex-wrap;의 단축값 */
+}
+
+.item {
+    width: 40%;
+}
+
+.item:nth-child(1) {
+    white-space: nowrap;
+    /* flex는 nowrap이 기본값이라 넘치면 삐져나감 */
+
+}

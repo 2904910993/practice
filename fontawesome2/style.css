@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.section::after {
+    content: "\f59a";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    /* fontawesome 5버전을 CSS에서 사용하기 위해서는 font-family와 font-weight: 가 같이 들어가야 함; */
+    /* 무료 버전을 사용하기 위해서는 pro를 free로 변경 */
+}
+
+.wrap2 {
+    position: relative;
+    margin-top: 50px;
+    width: 400px;
+    height: 400px;
+    background-color: pink;
+}
+
+.wrap2 .section2 {
+    position: absolute;
+    left: calc(50% - 50px);
+    /* transform을 사용하지 않고 정중앙에 두고싶을 때 넓이에서 -절반값을 사용. calc라는 계산기값의 명령문, -를 사용할 때 띄어쓰기 필수(붙여서 사용하게되면 음수로 인식해서 값이 틀려짐) */
+    top: calc(50% - 50px);
+    /* transform: translate(-50%, -50%); = left: calc(50% - 넓이 절반값), top: calc(50% - 높이 절반값)*/
+    /* 정중앙에 두고싶을 때 */
+    width: 100px;
+    height: 100px;
+    background-color: #0081B4;
+}

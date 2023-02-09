@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.section::after {
+    content: "\f598";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+}
